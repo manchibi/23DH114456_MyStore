@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<style type="text/css">
+    body{
+        background-color:white;
+    }
+    #logo{
+        text-align:center;
+    }
+    .inline{
+        display:inline;
+        padding-left:50px;
+    }
+    .linklist a {
+        cursor: pointer;
+        text-decoration: none;
+        color:grey;
+        font-size:20px;
+    }
+    .linklist{
+        display:inline;
+    }
+    #container-link{
+        background-color:ghostwhite;
+    }
+    #footer{
+        background-color:black;
+        color:white;
+        
+    }
+        #footer a {
+            cursor: pointer;
+            text-decoration: none;
+            color:white;
+        }
+</style>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <div id="logo" >
+        <h2 style="display:inline;color:red;">SHOP&nbsp;&nbsp;</h2>
+        <h3 style="display:inline;color:cornflowerblue">Nội Thất</h3>
+    </div>
+    <div id="container-link">
+        <div class="linklist">
+            <nav>
+                <ul>
+                    <li class="inline"><a href="#">Phòng Khách</a></li>
+                    <li class="inline"><a href="#">Phòng Ngủ</a></li>
+                    <li class="inline"><a href="#">Phòng Bếp</a></li>
+                    <li class="inline"><a href="#">Ngoài Trời</a></li>
+                    <li class="inline"><a href="#">Thiết Kế</a></li>
+                    <li class="inline"><a href="#">TÍnh Năng & Demo</a></li>
+                    <li class="inline" style="padding-left:150px;"><a href="@Url.Action("Register", "Account", null)"><i class="fas fa-user"></i>&nbsp;Tài Khoản</a></li>
+                    <li class="inline" style="padding-left:50px;"><a href="@Url.Action("Index","Cart",null)"><i class="fas fa-shopping-cart"></i>&nbsp;Giỏ Hàng</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="maincontent">
+        @RenderBody()
+    </div>
+    <div id="footer">
+        <h2>Thông tin liên hệ:</h2>
+        <nav>
+            <ul>
+                <li class="inline"><a href="#"><i class="fa-brands fa-facebook"></i>&nbsp;Facebook</a></li>
+                <li class="inline"><a href="#"><i class="fa-brands fa-instagram"></i>&nbsp;Instagram</a></li>
+                <li class="inline"><a href="#"><i class="fa-solid fa-phone"></i>&nbsp;Phone</a></li>
+            </ul>
+        </nav>
+        <p style="font-size:50px">23DH114456-Huỳnh Quang Mẫn</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿@model _23DH114456_MyStore.Models.ViewModel.LoginVM
+
+@{
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
+}
+
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<style>
+    .accountbtn {
+        width:275px;
+        height:40px;
+        border: 1px solid #808080;
+        margin: 5px;
+        align-items:center;
+    }
+</style>
+
+<!DOCTYPE html>
+<div>
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <h2 class="col-md-6" style="text-align:center;">Đăng nhập</h2>
+        </div>
+        //Tên đăng nhập
+        <div class="form-group" style="padding-left:150px;">
+            @Html.LabelFor(m => m.Username, new { @Class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Username)
+            </div>
+        </div>
+        //Mật khẩu
+        <div class="form-group" style="padding-left:150px;">
+            @Html.LabelFor(m => m.Password, new { @Class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+        </div>
+
+        <div class="form-group" style="padding-left:150px;">
+            <div class="col-md-offset-2 col-md-4">
+                <input type="submit" value="Đăng nhập" class="btn btn-info accountbtn" /><br />
+                <p>Bạn chưa có tài khoản?<a href="@Url.Action("Register", "Account", null)" />Đăng ký ngay</p>
+            </div>
+        </div>
+    }
+</div>

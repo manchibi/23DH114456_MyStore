@@ -14,7 +14,7 @@
     @Html.AntiForgeryToken()
 
     <div>
-        @Html.ActionLink("Xóa", "Delete", new { id = Model.ProductID }, new { @class = "btn btn-primary" }) |
+        <input type="submit" value="Xóa" class="btn btn-primary"/> |
         @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary" })
     </div>
 }
