@@ -240,7 +240,6 @@
       <DependentUpon>MyStoreModel.edmx</DependentUpon>
     </Content>
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Details.cshtml" />
@@ -255,6 +254,7 @@
     <Content Include="Areas\Admin\Views\Products\PV_CreateEditProduct.cshtml" />
     <Content Include="Areas\Admin\Views\Products\PV_ProductInfo.cshtml" />
     <Content Include="Areas\Admin\Views\Products\PV_ListProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
